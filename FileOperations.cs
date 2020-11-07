@@ -22,15 +22,30 @@
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-
-                using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+                else
                 {
-                    foreach (ZipArchiveEntry entry in archive.Entries)
-                    {
-                        string destinationPath = Path.GetFullPath(Path.Combine(folderPath, entry.FullName));
-                        entry.ExtractToFile(destinationPath, true);
-                    }
+                    // See TODO note below why we delete
+                    DeletePrivesckerFolder(folderPath);
                 }
+
+                // TODO: Improve the way it extracts files. Current method has no ability to overwrite
+                ZipFile.ExtractToDirectory(zipPath, folderPath);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Used to delete all contents of privescker before extracting
+        /// </summary>
+        /// <param name="folderPath"></param>
+        private static void DeletePrivesckerFolder(string folderPath)
+        {
+            try
+            {
+                Directory.Delete(folderPath, true);
             }
             catch (Exception ex)
             {
