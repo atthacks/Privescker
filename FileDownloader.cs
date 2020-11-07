@@ -17,8 +17,6 @@
             {
                 using (var client = new WebClient())
                 {
-                    //client.OpenRead(url);
-
                     // Lets get the filename
                     string filename = GetFileName(url, client);
 
@@ -44,15 +42,13 @@
         private static string GetFileName(string url, WebClient client)
         {
             return url.Split('/').Last();
+
+            // TODO: Improve filename check.
+
             //if (!string.IsNullOrEmpty(client.ResponseHeaders["Content-Disposition"]))
             //{
             //    // Lets try and get the file name from the headers
             //    return new ContentDisposition(client.ResponseHeaders["Content-Disposition"]).FileName;
-            //}
-            //else
-            //{
-            //    // If this fails then lets just assume it is the last part of the URL
-            //    return url.Split('/').Last();
             //}
         }
     }
